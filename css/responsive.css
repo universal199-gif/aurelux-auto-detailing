@@ -1,0 +1,271 @@
+/* ==========================================================================
+   AURELUX Auto Detailing — css/responsive.css
+   Larger-screen enhancements. The base (phone) layout is in css/style.css.
+   Breakpoints (min-width): 40em = 640px, 56em = 896px, 75em = 1200px.
+   Load AFTER style.css.
+   ========================================================================== */
+
+/* TABLET PORTRAIT AND UP — 640px ----------------------------------------- */
+@media (min-width: 40em) {
+  .btn-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .cta-band .btn-row {
+    justify-content: center;
+  }
+
+  .value-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .field--full {
+    grid-column: 1 / -1;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brand__sub {
+    display: block;
+  }
+
+  .lightbox__figure {
+    padding-inline: var(--space-7);
+  }
+}
+
+/* LAPTOP AND UP — 896px: desktop navigation, multi-column layouts -------- */
+@media (min-width: 56em) {
+  :root {
+    --header-h: 5rem;
+  }
+
+  /* Inline navigation; the menu button is no longer needed */
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav,
+  .js .site-nav {
+    position: static;
+    display: block;
+    max-height: none;
+    padding: 0;
+    overflow: visible;
+    background: transparent;
+    border: 0;
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+  }
+
+  .site-nav__list {
+    flex-direction: row;
+    gap: var(--space-1);
+  }
+
+  .site-nav__link {
+    position: relative;
+    padding-inline: var(--space-3);
+    border-bottom: 0;
+    font-size: 0.9375rem;
+  }
+
+  .site-nav__link::after {
+    content: "";
+    position: absolute;
+    left: var(--space-3);
+    right: var(--space-3);
+    bottom: 0.55rem;
+    height: 1px;
+    background: var(--c-gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--t-med) var(--ease);
+  }
+
+  .site-nav__link:hover::after,
+  .site-nav__link[aria-current="page"]::after {
+    transform: scaleX(1);
+  }
+
+  .site-nav__cta {
+    margin-top: 0;
+  }
+
+  .site-nav__cta .btn {
+    width: auto;
+    min-height: 2.75rem;
+    padding-inline: 1.4rem;
+  }
+
+  .hero {
+    align-items: center;
+    padding-bottom: var(--space-8);
+  }
+
+  .value-strip {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+    padding-block: var(--space-7);
+  }
+
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .steps {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .split {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+
+  .split--reverse .split__media {
+    order: 2;
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+
+  .contact-grid {
+    grid-template-columns: 3fr 2fr;
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  /* Gallery: fixed row height lets one tile span two rows for rhythm */
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: clamp(14rem, 22vw, 19rem);
+    grid-auto-flow: dense;
+  }
+
+  .gallery-item {
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .gallery-item--feature {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  /* Lightbox: previous/next move to the sides */
+  .lightbox__prev,
+  .lightbox__next {
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .lightbox__prev {
+    left: var(--space-5);
+  }
+
+  .lightbox__next {
+    right: var(--space-5);
+  }
+
+  .lightbox__figure {
+    padding-block: 4.5rem;
+  }
+
+  .lightbox__img {
+    max-height: calc(100vh - 12rem);
+    max-height: calc(100svh - 12rem);
+  }
+}
+
+/* DESKTOP AND UP — 1200px ------------------------------------------------ */
+@media (min-width: 75em) {
+  .grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .tier {
+    padding: var(--space-7) var(--space-6);
+  }
+
+  .gallery-grid {
+    gap: var(--space-4);
+  }
+}
+
+/* SHORT LANDSCAPE PHONES: avoid a hero taller than the screen ------------ */
+@media (max-height: 32.5em) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding-block: calc(var(--header-h) + var(--space-5)) var(--space-6);
+  }
+
+  .lightbox__figure {
+    padding-block: 3.5rem 1rem;
+  }
+
+  .lightbox__img {
+    max-height: calc(100vh - 5.5rem);
+    max-height: calc(100svh - 5.5rem);
+  }
+
+  .lightbox__prev,
+  .lightbox__next {
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .lightbox__prev {
+    left: var(--space-3);
+  }
+
+  .lightbox__next {
+    right: var(--space-3);
+  }
+}
