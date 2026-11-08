@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Adds the "js" class BEFORE the stylesheet loads (menu + reveal depend on it) -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <title>Illustrative Pricing &amp; Packages | AURELUX Auto Detailing Demo</title>
+  <meta name="description" content="Compare three illustrative detailing packages from AURELUX, a fictional premium detailing studio. Demo prices only, created for portfolio demonstration.">
+  <meta name="theme-color" content="#0B0B0C">
+
+  <!-- Open Graph. TODO before publishing: add og:url and og:image with ABSOLUTE
+       https:// URLs once the live domain is known. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AURELUX Auto Detailing (demo)">
+  <meta property="og:title" content="Illustrative Pricing | AURELUX Auto Detailing">
+  <meta property="og:description" content="Three demonstration detailing packages with illustrative prices. A fictional studio concept for portfolio use.">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="brand" href="index.html" aria-label="AURELUX Auto Detailing, home">
+        <span class="brand__mark" aria-hidden="true">A</span>
+        <span>
+          <span class="brand__name">AURELUX</span>
+          <span class="brand__sub">Auto Detailing</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html">Home</a></li>
+          <li><a class="site-nav__link" href="services.html">Services</a></li>
+          <li><a class="site-nav__link" href="pricing.html" aria-current="page">Pricing</a></li>
+          <li><a class="site-nav__link" href="gallery.html">Gallery</a></li>
+          <li><a class="site-nav__link" href="about.html">About</a></li>
+          <li><a class="site-nav__link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="site-nav__cta">
+          <a class="btn btn--primary" href="contact.html#quote">Request a Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== PAGE INTRO ===================== -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <span class="eyebrow">Pricing</span>
+        <h1 id="page-title">Clear packages, honestly presented</h1>
+        <hr class="gold-rule">
+        <p class="lead">Three demonstration packages show how a premium studio could lay out its options, from a maintenance detail to a full correction and coating.</p>
+        <p class="demo-note"><strong>Illustrative pricing only.</strong> AURELUX is a fictional business, and every price on this page is a demonstration figure. None of them is a real quotation or a verified price.</p>
+      </div>
+    </section>
+
+    <!-- ===================== PACKAGES ===================== -->
+    <section class="section" id="packages" aria-labelledby="packages-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Packages</span>
+          <h2 id="packages-title">Choose a starting point</h2>
+          <hr class="gold-rule">
+          <p class="lead">Every vehicle is different, so a real studio would confirm the package and price in a written quote.</p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <article class="tier reveal">
+            <h3 class="tier__name">Refresh</h3>
+            <p class="tier__desc">A tidy inside-and-out detail for vehicles already in good condition.</p>
+            <p class="tier__price">$189 <small>from &middot; illustrative</small></p>
+            <p class="tier__note">Demo price, not a real quotation.</p>
+            <ul class="check-list tier__list">
+              <li>Exterior hand wash and wheel cleaning</li>
+              <li>Interior vacuum and wipe-down</li>
+              <li>Interior glass cleaning</li>
+              <li>Final inspection and walkthrough</li>
+              <li class="is-off"><span class="visually-hidden">Not included: </span>Paint decontamination</li>
+              <li class="is-off"><span class="visually-hidden">Not included: </span>Paint polishing or correction</li>
+              <li class="is-off"><span class="visually-hidden">Not included: </span>Ceramic coating</li>
+            </ul>
+            <a class="btn btn--secondary btn--block" href="contact.html#quote">Request a Quote<span class="visually-hidden"> for the Refresh package</span></a>
+          </article>
+
+          <article class="tier tier--featured reveal">
+            <span class="tier__flag">Featured</span>
+            <h3 class="tier__name">Signature</h3>
+            <p class="tier__desc">A deeper clean with paint decontamination and a single-stage polish for added gloss.</p>
+            <p class="tier__price">$549 <small>from &middot; illustrative</small></p>
+            <p class="tier__note">Demo price, not a real quotation.</p>
+            <ul class="check-list tier__list">
+              <li>Everything in Refresh</li>
+              <li>Paint decontamination (iron and clay)</li>
+              <li>Deep interior cleaning of seats and carpets</li>
+              <li>Leather conditioning</li>
+              <li>Single-stage paint polish</li>
+              <li class="is-off"><span class="visually-hidden">Not included: </span>Multi-stage paint correction</li>
+              <li class="is-off"><span class="visually-hidden">Not included: </span>Ceramic coating</li>
+            </ul>
+            <a class="btn btn--primary btn--block" href="contact.html#quote">Request a Quote<span class="visually-hidden"> for the Signature package</span></a>
+          </article>
+
+          <article class="tier reveal">
+            <h3 class="tier__name">Prestige</h3>
+            <p class="tier__desc">Multi-stage paint correction and a ceramic coating for a refined, protected finish.</p>
+            <p class="tier__price">$1,290 <small>from &middot; illustrative</small></p>
+            <p class="tier__note">Demo price, not a real quotation.</p>
+            <ul class="check-list tier__list">
+              <li>Everything in Signature</li>
+              <li>Multi-stage paint correction</li>
+              <li>Ceramic coating application</li>
+              <li>Extended final inspection under studio lighting</li>
+            </ul>
+            <a class="btn btn--secondary btn--block" href="contact.html#quote">Request a Quote<span class="visually-hidden"> for the Prestige package</span></a>
+          </article>
+
+        </div>
+
+        <p class="text-muted text-center mt-6">All figures are illustrative demonstration prices. Final pricing for a real business would depend on vehicle size, condition and the services chosen.</p>
+      </div>
+    </section>
+
+    <!-- ===================== COMPARISON TABLE ===================== -->
+    <section class="section section--alt" id="compare" aria-labelledby="compare-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Compare</span>
+          <h2 id="compare-title">What's included, side by side</h2>
+          <hr class="gold-rule">
+          <p class="lead">On a small screen, swipe the table sideways to see every package.</p>
+        </div>
+
+        <div class="table-scroll" role="region" aria-label="Package comparison table, scrolls sideways on small screens" tabindex="0">
+          <table class="comparison-table">
+            <caption class="visually-hidden">Illustrative comparison of the Refresh, Signature and Prestige packages</caption>
+            <thead>
+              <tr>
+                <th scope="col"><span class="visually-hidden">Feature</span></th>
+                <th scope="col">Refresh</th>
+                <th scope="col">Signature</th>
+                <th scope="col">Prestige</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Exterior hand wash and wheel cleaning</th>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Interior vacuum and wipe-down</th>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Interior glass cleaning</th>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Paint decontamination (iron and clay)</th>
+                <td class="is-no"><span aria-hidden="true">&mdash;</span><span class="visually-hidden">Not included</span></td>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Deep interior cleaning (seats and carpets)</th>
+                <td class="is-no"><span aria-hidden="true">&mdash;</span><span class="visually-hidden">Not included</span></td>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Leather conditioning</th>
+                <td class="is-no"><span aria-hidden="true">&mdash;</span><span class="visually-hidden">Not included</span></td>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Paint polish or correction</th>
+                <td class="is-no"><span aria-hidden="true">&mdash;</span><span class="visually-hidden">Not included</span></td>
+                <td class="is-yes">Single-stage</td>
+                <td class="is-yes">Multi-stage</td>
+              </tr>
+              <tr>
+                <th scope="row">Ceramic coating application</th>
+                <td class="is-no"><span aria-hidden="true">&mdash;</span><span class="visually-hidden">Not included</span></td>
+                <td class="is-no"><span aria-hidden="true">&mdash;</span><span class="visually-hidden">Not included</span></td>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Final inspection and walkthrough</th>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+                <td class="is-yes"><span aria-hidden="true">&#10003;</span><span class="visually-hidden">Included</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Illustrative starting price</th>
+                <td>$189</td>
+                <td>$549</td>
+                <td>$1,290</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-muted mt-5">Prices are illustrative demonstration figures, not real quotations.</p>
+      </div>
+    </section>
+
+    <!-- ===================== HOW A REAL QUOTE WORKS ===================== -->
+    <section class="section" aria-labelledby="quote-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Your quote</span>
+          <h2 id="quote-title">What shapes a final price</h2>
+          <hr class="gold-rule">
+          <p class="lead">Packages are a starting point. A real quote would take a few practical details into account.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="feature reveal">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13l2-5h12l2 5v5H4v-5z"/><circle cx="8" cy="18" r="1.5"/><circle cx="16" cy="18" r="1.5"/></svg>
+            <h3>Vehicle size and type</h3>
+            <p>A compact coupe and a large SUV need different amounts of time and product.</p>
+          </div>
+          <div class="feature reveal">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/></svg>
+            <h3>Paint and interior condition</h3>
+            <p>Heavier swirl marks or a well-used interior may call for extra work.</p>
+          </div>
+          <div class="feature reveal">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>
+            <h3>Extras and scheduling</h3>
+            <p>Optional extras would be quoted separately, with timing agreed in advance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL CTA ===================== -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container">
+        <span class="eyebrow">Get started</span>
+        <h2 id="cta-title">Ready for a quote?</h2>
+        <p class="lead">Tell us about your vehicle and the finish you want, and we would recommend the right package.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="contact.html#quote">Request a Quote</a>
+          <a class="btn btn--secondary" href="services.html">View Services</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="AURELUX Auto Detailing, home">
+            <span class="brand__mark" aria-hidden="true">A</span>
+            <span class="brand__name">AURELUX</span>
+          </a>
+          <p>Premium automotive care. Perfected.</p>
+          <p class="badge-demo">Demo website &middot; Fictional business</p>
+        </div>
+
+        <nav class="footer-nav" aria-labelledby="footer-pages">
+          <h2 id="footer-pages" class="footer-title">Explore</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav" aria-labelledby="footer-services">
+          <h2 id="footer-services" class="footer-title">Services</h2>
+          <ul>
+            <li><a href="services.html#ceramic-coating">Ceramic Coating</a></li>
+            <li><a href="services.html#paint-correction">Paint Correction</a></li>
+            <li><a href="services.html#interior-detailing">Interior Detailing</a></li>
+            <li><a href="services.html#exterior-detailing">Exterior Detailing</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-nav">
+          <h2 class="footer-title">Contact</h2>
+          <p class="text-muted">Contact details are placeholders until a real business supplies them.</p>
+          <a href="contact.html#quote">Request a quote</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> AURELUX Auto Detailing. A fictional business created for portfolio demonstration.</p>
+        <p>Photography is stock imagery used for illustration and does not depict AURELUX customers.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

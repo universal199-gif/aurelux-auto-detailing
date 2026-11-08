@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Adds the "js" class BEFORE the stylesheet loads (menu + reveal depend on it) -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <title>Detailing Services | AURELUX Auto Detailing Demo, Costa Mesa CA</title>
+  <meta name="description" content="Ceramic coating, paint correction, interior and exterior detailing and full detailing packages from AURELUX, a fictional premium detailing studio created as a portfolio demo.">
+  <meta name="theme-color" content="#0B0B0C">
+
+  <!-- Open Graph. TODO before publishing: add og:url and og:image with ABSOLUTE
+       https:// URLs once the live domain is known. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AURELUX Auto Detailing (demo)">
+  <meta property="og:title" content="Detailing Services | AURELUX Auto Detailing">
+  <meta property="og:description" content="Ceramic coating, paint correction, interior and exterior detailing. A fictional studio concept for portfolio demonstration.">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="brand" href="index.html" aria-label="AURELUX Auto Detailing, home">
+        <span class="brand__mark" aria-hidden="true">A</span>
+        <span>
+          <span class="brand__name">AURELUX</span>
+          <span class="brand__sub">Auto Detailing</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html">Home</a></li>
+          <li><a class="site-nav__link" href="services.html" aria-current="page">Services</a></li>
+          <li><a class="site-nav__link" href="pricing.html">Pricing</a></li>
+          <li><a class="site-nav__link" href="gallery.html">Gallery</a></li>
+          <li><a class="site-nav__link" href="about.html">About</a></li>
+          <li><a class="site-nav__link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="site-nav__cta">
+          <a class="btn btn--primary" href="contact.html#quote">Request a Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== PAGE INTRO ===================== -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <span class="eyebrow">Services</span>
+        <h1 id="page-title">Detailing services built around the finish</h1>
+        <hr class="gold-rule">
+        <p class="lead">Protection, restoration and careful cleaning, inside and out. Each service is described below, and every vehicle would be assessed before any work begins.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="contact.html#quote">Request a Quote</a>
+          <a class="btn btn--secondary" href="pricing.html">View Illustrative Pricing</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 01 CERAMIC COATING =====================
+         IMAGE: assets/images/service-ceramic.jpg (reused from the homepage) -->
+    <section class="section" id="ceramic-coating" aria-labelledby="ceramic-title">
+      <div class="container">
+        <div class="split">
+          <div class="split__media reveal">
+            <img src="assets/images/service-ceramic.jpg" alt="Gloved hand applying ceramic coating to the hood of a gloss-black car" width="1200" height="900" loading="lazy">
+          </div>
+          <div class="split__body reveal">
+            <span class="eyebrow">01 &middot; Protection</span>
+            <h2 id="ceramic-title">Ceramic Coating</h2>
+            <hr class="gold-rule">
+            <p class="lead">A liquid-applied protective layer that bonds to the paint once it has been properly prepared. It is designed to add depth and gloss and to make routine washing easier.</p>
+            <p class="eyebrow">Key benefits</p>
+            <ul class="check-list">
+              <li>Enhanced gloss and depth of colour</li>
+              <li>Easier, faster maintenance washes</li>
+              <li>Helps resist road film, water spots and everyday contamination</li>
+              <li>Applied over carefully prepared paint</li>
+            </ul>
+            <p class="text-muted mt-5">Best suited to new vehicles, or paint that has just been corrected. Results depend on preparation, product choice and aftercare.</p>
+            <div class="btn-row mt-5">
+              <a class="btn btn--primary" href="contact.html#quote">Request a Quote<span class="visually-hidden"> for ceramic coating</span></a>
+              <a class="link-arrow" href="pricing.html#packages">See packages</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 02 PAINT CORRECTION =====================
+         IMAGE: assets/images/service-correction.jpg (reused from the homepage) -->
+    <section class="section section--alt" id="paint-correction" aria-labelledby="correction-title">
+      <div class="container">
+        <div class="split split--reverse">
+          <div class="split__media reveal">
+            <img src="assets/images/service-correction.jpg" alt="Polishing machine correcting swirl marks on a car panel under inspection light" width="1200" height="900" loading="lazy">
+          </div>
+          <div class="split__body reveal">
+            <span class="eyebrow">02 &middot; Restoration</span>
+            <h2 id="correction-title">Paint Correction</h2>
+            <hr class="gold-rule">
+            <p class="lead">Careful machine polishing of the clear coat to reduce swirl marks, light scratches and oxidation. The depth of correction depends on the condition and thickness of the paint, so it is assessed first.</p>
+            <p class="eyebrow">Key benefits</p>
+            <ul class="check-list">
+              <li>Reduced swirl marks and light surface defects</li>
+              <li>Improved clarity and reflection</li>
+              <li>An excellent base before a coating or sealant</li>
+              <li>An approach guided by the paint's condition</li>
+            </ul>
+            <p class="text-muted mt-5">Best suited to paint that looks dull or hazy under sunlight. Deep scratches that pass through the clear coat cannot be fully polished out.</p>
+            <div class="btn-row mt-5">
+              <a class="btn btn--primary" href="contact.html#quote">Request a Quote<span class="visually-hidden"> for paint correction</span></a>
+              <a class="link-arrow" href="pricing.html#packages">See packages</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 03 INTERIOR DETAILING =====================
+         IMAGE: assets/images/service-interior.jpg (reused from the homepage) -->
+    <section class="section" id="interior-detailing" aria-labelledby="interior-title">
+      <div class="container">
+        <div class="split">
+          <div class="split__media reveal">
+            <img src="assets/images/service-interior.jpg" alt="Clean leather seats and dashboard inside a luxury car interior" width="1200" height="900" loading="lazy">
+          </div>
+          <div class="split__body reveal">
+            <span class="eyebrow">03 &middot; Cabin care</span>
+            <h2 id="interior-title">Interior Detailing</h2>
+            <hr class="gold-rule">
+            <p class="lead">Thorough cleaning and conditioning of every surface inside the cabin: seats, carpets, dashboard, door cards and glass, with care taken around controls and sensitive materials.</p>
+            <p class="eyebrow">Key benefits</p>
+            <ul class="check-list">
+              <li>Deep cleaning of fabric, carpet and leather</li>
+              <li>Conditioning for leather and trim</li>
+              <li>Streak-free interior glass</li>
+              <li>A fresher, cleaner cabin to drive in</li>
+            </ul>
+            <p class="text-muted mt-5">Best suited to daily drivers, family vehicles, or a vehicle being prepared for sale.</p>
+            <div class="btn-row mt-5">
+              <a class="btn btn--primary" href="contact.html#quote">Request a Quote<span class="visually-hidden"> for interior detailing</span></a>
+              <a class="link-arrow" href="pricing.html#packages">See packages</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 04 EXTERIOR DETAILING =====================
+         IMAGE: assets/images/service-exterior.jpg (reused from the homepage) -->
+    <section class="section section--alt" id="exterior-detailing" aria-labelledby="exterior-title">
+      <div class="container">
+        <div class="split split--reverse">
+          <div class="split__media reveal">
+            <img src="assets/images/service-exterior.jpg" alt="Freshly washed luxury car with water beading on the paint" width="1200" height="900" loading="lazy">
+          </div>
+          <div class="split__body reveal">
+            <span class="eyebrow">04 &middot; Wash and protect</span>
+            <h2 id="exterior-title">Exterior Detailing</h2>
+            <hr class="gold-rule">
+            <p class="lead">A careful multi-step wash with decontamination to lift bonded dirt, followed by a sealant or wax that enhances gloss and adds a layer of protection.</p>
+            <p class="eyebrow">Key benefits</p>
+            <ul class="check-list">
+              <li>A wash method designed to reduce the risk of new marks</li>
+              <li>Decontamination for a smooth, clean surface</li>
+              <li>Wheels, tyres, trim and glass cleaned</li>
+              <li>Gloss-enhancing protection to finish</li>
+            </ul>
+            <p class="text-muted mt-5">Best suited to regular upkeep, or as preparation before polishing or coating.</p>
+            <div class="btn-row mt-5">
+              <a class="btn btn--primary" href="contact.html#quote">Request a Quote<span class="visually-hidden"> for exterior detailing</span></a>
+              <a class="link-arrow" href="pricing.html#packages">See packages</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 05 FULL DETAILING PACKAGES =====================
+         IMAGE (new): assets/images/service-packages.jpg (4:3, about 1200x900) -->
+    <section class="section" id="full-detailing-packages" aria-labelledby="packages-title">
+      <div class="container">
+        <div class="split">
+          <div class="split__media reveal">
+            <img src="assets/images/service-packages.jpg" alt="Luxury car in a detailing studio after a complete inside-and-out detail" width="1200" height="900" loading="lazy">
+          </div>
+          <div class="split__body reveal">
+            <span class="eyebrow">05 &middot; Complete care</span>
+            <h2 id="packages-title">Full Detailing Packages</h2>
+            <hr class="gold-rule">
+            <p class="lead">Combine services into a single visit. Three demonstration packages show how the work above could be bundled.</p>
+            <ul class="check-list">
+              <li><strong>Refresh:</strong> a tidy inside-and-out maintenance detail</li>
+              <li><strong>Signature:</strong> deeper cleaning, decontamination and a single-stage polish</li>
+              <li><strong>Prestige:</strong> multi-stage paint correction and a ceramic coating</li>
+            </ul>
+            <div class="btn-row mt-5">
+              <a class="btn btn--primary" href="contact.html#quote">Request a Quote<span class="visually-hidden"> for a full detailing package</span></a>
+              <a class="btn btn--secondary" href="pricing.html#packages">Compare Packages</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROCESS ===================== -->
+    <section class="section section--alt" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How it works</span>
+          <h2 id="process-title">A typical visit, step by step</h2>
+          <hr class="gold-rule">
+          <p class="lead">A straightforward process from the first conversation to the final walkthrough.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <h3>Consultation</h3>
+            <p>Discuss the vehicle, what you would like improved and which services suit it.</p>
+          </li>
+          <li class="step reveal">
+            <h3>Inspection and prep</h3>
+            <p>Assess the paint and interior, then wash and decontaminate before any treatment.</p>
+          </li>
+          <li class="step reveal">
+            <h3>Treatment</h3>
+            <p>Polishing, coating or deep cleaning, depending on the services chosen.</p>
+          </li>
+          <li class="step reveal">
+            <h3>Final inspection</h3>
+            <p>A last check under good light and a walkthrough of the finished work.</p>
+          </li>
+        </ol>
+
+        <p class="demo-note"><strong>Demonstration content:</strong> AURELUX is a fictional business. These service descriptions and this process illustrate how a real studio could present its work. They are not guarantees or claims about results.</p>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL CTA ===================== -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container">
+        <span class="eyebrow">Get started</span>
+        <h2 id="cta-title">Not sure which service fits?</h2>
+        <p class="lead">Tell us about your vehicle and the finish you want, and request a no-obligation quote.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="contact.html#quote">Request a Quote</a>
+          <a class="btn btn--secondary" href="pricing.html">View Pricing</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="AURELUX Auto Detailing, home">
+            <span class="brand__mark" aria-hidden="true">A</span>
+            <span class="brand__name">AURELUX</span>
+          </a>
+          <p>Premium automotive care. Perfected.</p>
+          <p class="badge-demo">Demo website &middot; Fictional business</p>
+        </div>
+
+        <nav class="footer-nav" aria-labelledby="footer-pages">
+          <h2 id="footer-pages" class="footer-title">Explore</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav" aria-labelledby="footer-services">
+          <h2 id="footer-services" class="footer-title">Services</h2>
+          <ul>
+            <li><a href="services.html#ceramic-coating">Ceramic Coating</a></li>
+            <li><a href="services.html#paint-correction">Paint Correction</a></li>
+            <li><a href="services.html#interior-detailing">Interior Detailing</a></li>
+            <li><a href="services.html#exterior-detailing">Exterior Detailing</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-nav">
+          <h2 class="footer-title">Contact</h2>
+          <p class="text-muted">Contact details are placeholders until a real business supplies them.</p>
+          <a href="contact.html#quote">Request a quote</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> AURELUX Auto Detailing. A fictional business created for portfolio demonstration.</p>
+        <p>Photography is stock imagery used for illustration and does not depict AURELUX customers.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
