@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Adds the "js" class BEFORE the stylesheet loads (menu + reveal depend on it) -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <title>Gallery | AURELUX Auto Detailing Demo, Costa Mesa CA</title>
+  <meta name="description" content="An illustrative gallery of detailing imagery for AURELUX, a fictional premium car detailing studio created as a portfolio demonstration. Not real customer work.">
+  <meta name="theme-color" content="#0B0B0C">
+
+  <!-- Open Graph. TODO before publishing: add og:url and og:image with ABSOLUTE
+       https:// URLs once the live domain is known. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AURELUX Auto Detailing (demo)">
+  <meta property="og:title" content="Gallery | AURELUX Auto Detailing">
+  <meta property="og:description" content="Illustrative detailing imagery for a fictional studio concept, created for portfolio demonstration.">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Both scripts are deferred, so they run in this order after the page is parsed -->
+  <script src="js/main.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="brand" href="index.html" aria-label="AURELUX Auto Detailing, home">
+        <span class="brand__mark" aria-hidden="true">A</span>
+        <span>
+          <span class="brand__name">AURELUX</span>
+          <span class="brand__sub">Auto Detailing</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html">Home</a></li>
+          <li><a class="site-nav__link" href="services.html">Services</a></li>
+          <li><a class="site-nav__link" href="pricing.html">Pricing</a></li>
+          <li><a class="site-nav__link" href="gallery.html" aria-current="page">Gallery</a></li>
+          <li><a class="site-nav__link" href="about.html">About</a></li>
+          <li><a class="site-nav__link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="site-nav__cta">
+          <a class="btn btn--primary" href="contact.html#quote">Request a Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== PAGE INTRO ===================== -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <span class="eyebrow">Gallery</span>
+        <h1 id="page-title">The finish, up close</h1>
+        <hr class="gold-rule">
+        <p class="lead">Browse illustrative imagery of the kind of detailing work a premium studio would show: gloss, clarity, protection and clean interiors.</p>
+        <p class="demo-note"><strong>Demonstration gallery.</strong> AURELUX is a fictional business. These are stock photographs used for illustration. They are not customer projects, and they do not show real work or results.</p>
+      </div>
+    </section>
+
+    <!-- ===================== GALLERY =====================
+         IMAGES (put in assets/images/, 4:3 landscape):
+           gallery-exterior-01.jpg  (feature tile, about 1600x1200)
+           gallery-interior-01.jpg   gallery-correction-01.jpg   gallery-ceramic-01.jpg
+           gallery-exterior-02.jpg   gallery-correction-02.jpg   gallery-interior-02.jpg
+           gallery-ceramic-02.jpg    gallery-exterior-03.jpg     (each about 1200x900)
+         Update every alt text to describe the photo you actually use.
+         To add a tile: copy one <button> block and set data-category to one of
+         exterior, interior, correction or ceramic. -->
+    <section class="section" aria-labelledby="gallery-title">
+      <div class="container">
+        <h2 id="gallery-title" class="visually-hidden">Illustrative gallery images</h2>
+
+        <noscript>
+          <p class="demo-note">Category filters and the enlarged image view need JavaScript, which appears to be turned off in your browser.</p>
+        </noscript>
+
+        <!-- Hidden until gallery.js runs, so the buttons are never shown without a working script -->
+        <div class="filter-bar" id="gallery-filters" role="group" aria-label="Filter gallery by category" hidden>
+          <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-chip" type="button" data-filter="exterior" aria-pressed="false">Exterior Detailing</button>
+          <button class="filter-chip" type="button" data-filter="interior" aria-pressed="false">Interior Detailing</button>
+          <button class="filter-chip" type="button" data-filter="correction" aria-pressed="false">Paint Correction</button>
+          <button class="filter-chip" type="button" data-filter="ceramic" aria-pressed="false">Ceramic Coating</button>
+        </div>
+
+        <!-- Announces filter results to screen readers -->
+        <p class="visually-hidden" id="gallery-status" role="status" aria-live="polite"></p>
+
+        <div class="gallery-grid" id="gallery-grid">
+
+          <button class="gallery-item gallery-item--feature" type="button" data-category="exterior" aria-haspopup="dialog">
+            <img src="assets/images/gallery-exterior-01.jpg" alt="Demonstration image: dark sedan with a deep, mirror-like gloss after an exterior detail" width="1600" height="1200" loading="lazy">
+            <span class="gallery-item__caption" aria-hidden="true"><span>Exterior Detailing</span>Deep gloss on a dark sedan (demo image)</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-category="interior" aria-haspopup="dialog">
+            <img src="assets/images/gallery-interior-01.jpg" alt="Demonstration image: clean leather seats and dashboard in a luxury car interior" width="1200" height="900" loading="lazy">
+            <span class="gallery-item__caption" aria-hidden="true"><span>Interior Detailing</span>A refined, freshly cleaned cabin (demo image)</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-category="correction" aria-haspopup="dialog">
+            <img src="assets/images/gallery-correction-01.jpg" alt="Demonstration image: polishing machine working on a car panel under inspection light" width="1200" height="900" loading="lazy">
+            <span class="gallery-item__caption" aria-hidden="true"><span>Paint Correction</span>Machine polishing under inspection light (demo image)</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-category="ceramic" aria-haspopup="dialog">
+            <img src="assets/images/gallery-ceramic-01.jpg" alt="Demonstration image: gloved hand applying ceramic coating to a glossy car panel" width="1200" height="900" loading="lazy">
+            <span class="gallery-item__caption" aria-hidden="true"><span>Ceramic Coating</span>Coating application in progress (demo image)</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-category="exterior" aria-haspopup="dialog">
+            <img src="assets/images/gallery-exterior-02.jpg" alt="Demonstration image: water beading on freshly washed car paint" width="1200" height="900" loading="lazy">
+            <span class="gallery-item__caption" aria-hidden="true"><span>Exterior Detailing</span>Water beading on freshly cleaned paint (demo image)</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-category="correction" aria-haspopup="dialog">
+            <img src="assets/images/gallery-correction-02.jpg" alt="Demonstration image: close-up of reflective car paint with swirl marks reduced" width="1200" height="900" loading="lazy">
+            <span class="gallery-item__caption" aria-hidden="true"><span>Paint Correction</span>Reflections restored in the paint (demo image)</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-category="interior" aria-haspopup="dialog">
+            <img src="assets/images/gallery-interior-02.jpg" alt="Demonstration image: close view of car seat stitching and interior trim" width="1200" height="900" loading="lazy">
+            <span class="gallery-item__caption" aria-hidden="true"><span>Interior Detailing</span>Seat and trim detail (demo image)</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-category="ceramic" aria-haspopup="dialog">
+            <img src="assets/images/gallery-ceramic-02.jpg" alt="Demonstration image: glossy coated car hood reflecting studio lights" width="1200" height="900" loading="lazy">
+            <span class="gallery-item__caption" aria-hidden="true"><span>Ceramic Coating</span>Gloss on a coated surface (demo image)</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-category="exterior" aria-haspopup="dialog">
+            <img src="assets/images/gallery-exterior-03.jpg" alt="Demonstration image: clean wheel and lower bodywork of a luxury car" width="1200" height="900" loading="lazy">
+            <span class="gallery-item__caption" aria-hidden="true"><span>Exterior Detailing</span>Wheels and trim cleaned (demo image)</span>
+          </button>
+
+        </div>
+
+        <p class="gallery-empty" id="gallery-empty" hidden>No images in this category yet.</p>
+
+        <p class="text-muted text-center mt-6">Select any image to view it larger. All images are illustrative stock photography.</p>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL CTA ===================== -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container">
+        <span class="eyebrow">Get started</span>
+        <h2 id="cta-title">Like what you see?</h2>
+        <p class="lead">Tell us about your vehicle and the finish you want, and request a no-obligation quote.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="contact.html#quote">Request a Quote</a>
+          <a class="btn btn--secondary" href="services.html">View Services</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="AURELUX Auto Detailing, home">
+            <span class="brand__mark" aria-hidden="true">A</span>
+            <span class="brand__name">AURELUX</span>
+          </a>
+          <p>Premium automotive care. Perfected.</p>
+          <p class="badge-demo">Demo website &middot; Fictional business</p>
+        </div>
+
+        <nav class="footer-nav" aria-labelledby="footer-pages">
+          <h2 id="footer-pages" class="footer-title">Explore</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav" aria-labelledby="footer-services">
+          <h2 id="footer-services" class="footer-title">Services</h2>
+          <ul>
+            <li><a href="services.html#ceramic-coating">Ceramic Coating</a></li>
+            <li><a href="services.html#paint-correction">Paint Correction</a></li>
+            <li><a href="services.html#interior-detailing">Interior Detailing</a></li>
+            <li><a href="services.html#exterior-detailing">Exterior Detailing</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-nav">
+          <h2 class="footer-title">Contact</h2>
+          <p class="text-muted">Contact details are placeholders until a real business supplies them.</p>
+          <a href="contact.html#quote">Request a quote</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> AURELUX Auto Detailing. A fictional business created for portfolio demonstration.</p>
+        <p>Photography is stock imagery used for illustration and does not depict AURELUX customers.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== LIGHTBOX (native <dialog>) =====================
+       Opened with showModal(): focus is trapped inside, Escape closes it,
+       and the page behind becomes inert. The close button is first so it
+       receives focus when the dialog opens. -->
+  <dialog class="lightbox" id="lightbox" aria-label="Enlarged image viewer">
+    <p class="lightbox__counter" id="lightbox-counter" aria-hidden="true"></p>
+    <p class="visually-hidden" id="lightbox-status" role="status" aria-live="polite"></p>
+
+    <button class="lightbox__btn lightbox__close" id="lightbox-close" type="button" aria-label="Close enlarged view" autofocus>&times;</button>
+    <button class="lightbox__btn lightbox__prev" id="lightbox-prev" type="button" aria-label="Previous image">&#8592;</button>
+
+    <figure class="lightbox__figure">
+      <!-- 1x1 transparent placeholder; gallery.js swaps in the real image -->
+      <img class="lightbox__img" id="lightbox-img" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+      <figcaption class="lightbox__caption" id="lightbox-caption"></figcaption>
+    </figure>
+
+    <button class="lightbox__btn lightbox__next" id="lightbox-next" type="button" aria-label="Next image">&#8594;</button>
+  </dialog>
+</body>
+</html>
