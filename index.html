@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Adds the "js" class BEFORE the stylesheet loads (menu + reveal depend on it) -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <title>AURELUX Auto Detailing | Premium Car Detailing Demo, Costa Mesa CA</title>
+  <meta name="description" content="AURELUX Auto Detailing is a fictional premium car detailing studio concept in Costa Mesa, California: ceramic coating, paint correction and detailing. Portfolio demo.">
+  <meta name="theme-color" content="#0B0B0C">
+
+  <!-- Open Graph. TODO before publishing: once the live domain is known, also add
+       og:url and og:image with ABSOLUTE https:// URLs (og:image: a 1200x630 image). -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AURELUX Auto Detailing (demo)">
+  <meta property="og:title" content="AURELUX Auto Detailing | Premium automotive care. Perfected.">
+  <meta property="og:description" content="A fictional premium car detailing studio concept, created as a portfolio demonstration.">
+
+  <!-- Favicon: favicon.svg will be added in a later step -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+
+  <!-- Site styles: order matters -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="brand" href="index.html" aria-label="AURELUX Auto Detailing, home">
+        <span class="brand__mark" aria-hidden="true">A</span>
+        <span>
+          <span class="brand__name">AURELUX</span>
+          <span class="brand__sub">Auto Detailing</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="site-nav__link" href="services.html">Services</a></li>
+          <li><a class="site-nav__link" href="pricing.html">Pricing</a></li>
+          <li><a class="site-nav__link" href="gallery.html">Gallery</a></li>
+          <li><a class="site-nav__link" href="about.html">About</a></li>
+          <li><a class="site-nav__link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="site-nav__cta">
+          <a class="btn btn--primary" href="contact.html#quote">Request a Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO =====================
+         IMAGE: assets/images/hero-detailing.jpg (landscape, about 1920x1080).
+         Update the alt text to describe the photo you actually use. -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__media">
+        <img src="assets/images/hero-detailing.jpg"
+             alt="Dark luxury sedan with a deep, glossy paint finish inside a lit detailing studio"
+             width="1920" height="1080" fetchpriority="high">
+      </div>
+      <div class="container">
+        <div class="hero__content">
+          <p class="badge-demo">Demo website &middot; Fictional business</p>
+          <span class="eyebrow mt-5">Costa Mesa, California</span>
+          <h1 id="hero-title" class="hero__title">Premium automotive care. Perfected.</h1>
+          <p class="hero__lead">Ceramic coating, paint correction and meticulous interior and exterior detailing, presented as a portfolio demonstration of a premium detailing studio.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="contact.html#quote">Request a Quote</a>
+            <a class="btn btn--secondary" href="services.html">Explore Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== VALUE STRIP ===================== -->
+    <section class="section--alt" aria-labelledby="approach-title">
+      <div class="container">
+        <h2 id="approach-title" class="visually-hidden">Our approach</h2>
+        <div class="value-strip">
+          <div class="value-item reveal">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>
+            <div>
+              <h3>Careful process</h3>
+              <p>Methodical steps from first wash to final inspection.</p>
+            </div>
+          </div>
+          <div class="value-item reveal">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/></svg>
+            <div>
+              <h3>Finish-first thinking</h3>
+              <p>Paint, glass and trim treated with equal attention.</p>
+            </div>
+          </div>
+          <div class="value-item reveal">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+            <div>
+              <h3>Protection options</h3>
+              <p>Sealants and ceramic coatings to suit the vehicle.</p>
+            </div>
+          </div>
+          <div class="value-item reveal">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5z"/></svg>
+            <div>
+              <h3>Clear communication</h3>
+              <p>Straightforward quotes and honest recommendations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURED SERVICES =====================
+         IMAGES (4:3, about 1200x900): service-ceramic.jpg, service-correction.jpg,
+         service-interior.jpg, service-exterior.jpg in assets/images/.
+         The links point to anchors that will exist on services.html. -->
+    <section class="section" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Services</span>
+          <h2 id="services-title">Detailing, done properly</h2>
+          <hr class="gold-rule">
+          <p class="lead">From protective coatings to full interior restoration, every service is built around the finish and the vehicle in front of us.</p>
+        </div>
+
+        <div class="grid grid--4">
+          <article class="service-card reveal">
+            <div class="service-card__media">
+              <img src="assets/images/service-ceramic.jpg" alt="Gloved hand applying ceramic coating to the hood of a gloss-black car" width="1200" height="900" loading="lazy">
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Ceramic Coating</h3>
+              <p class="service-card__text">A glossy protective layer designed to enhance depth and make washing easier.</p>
+              <a class="link-arrow" href="services.html#ceramic-coating">Learn more<span class="visually-hidden"> about ceramic coating</span></a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__media">
+              <img src="assets/images/service-correction.jpg" alt="Polishing machine correcting swirl marks on a car panel under inspection light" width="1200" height="900" loading="lazy">
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Paint Correction</h3>
+              <p class="service-card__text">Machine polishing to reduce swirl marks and light defects and restore clarity.</p>
+              <a class="link-arrow" href="services.html#paint-correction">Learn more<span class="visually-hidden"> about paint correction</span></a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__media">
+              <img src="assets/images/service-interior.jpg" alt="Clean leather seats and dashboard inside a luxury car interior" width="1200" height="900" loading="lazy">
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Interior Detailing</h3>
+              <p class="service-card__text">Deep cleaning of leather, fabric, carpets and trim for a fresh, refined cabin.</p>
+              <a class="link-arrow" href="services.html#interior-detailing">Learn more<span class="visually-hidden"> about interior detailing</span></a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__media">
+              <img src="assets/images/service-exterior.jpg" alt="Freshly washed luxury car with water beading on the paint" width="1200" height="900" loading="lazy">
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Exterior Detailing</h3>
+              <p class="service-card__text">Careful wash, decontamination and protection for a clean, glossy finish.</p>
+              <a class="link-arrow" href="services.html#exterior-detailing">Learn more<span class="visually-hidden"> about exterior detailing</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHY CHOOSE US =====================
+         IMAGE: assets/images/why-studio.jpg (4:3, about 1200x900) -->
+    <section class="section section--alt" aria-labelledby="why-title">
+      <div class="container">
+        <div class="split">
+          <div class="split__media reveal">
+            <img src="assets/images/why-studio.jpg" alt="Professional detailer inspecting a car's paint finish in a studio" width="1200" height="900" loading="lazy">
+          </div>
+          <div class="split__body reveal">
+            <span class="eyebrow">Why AURELUX</span>
+            <h2 id="why-title">A studio built around the finish</h2>
+            <hr class="gold-rule">
+            <p class="lead">A premium detailing experience means careful work, honest advice and a comfortable, professional visit.</p>
+            <ul class="check-list">
+              <li>A process-led approach from decontamination to final inspection</li>
+              <li>Products and methods chosen to suit each finish</li>
+              <li>Honest recommendations: only the work your vehicle needs</li>
+              <li>Clear quotes agreed before work begins</li>
+              <li>A refined, welcoming customer experience</li>
+            </ul>
+            <p class="demo-note"><strong>Demonstration content:</strong> AURELUX is a fictional business. These points illustrate the positioning a real studio could adopt.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BEFORE / AFTER =====================
+         IMAGES (4:3, same framing, about 1200x900): compare-before.jpg and
+         compare-after.jpg. These are demonstration images, not a real customer
+         vehicle, and the caption below says so. Keep that caption. -->
+    <section class="section" aria-labelledby="compare-title">
+      <div class="container">
+        <div class="split">
+          <div class="split__body reveal">
+            <span class="eyebrow">The difference</span>
+            <h2 id="compare-title">See the finish transform</h2>
+            <hr class="gold-rule">
+            <p class="lead">Drag the handle across the image, or focus it and use the arrow keys, to compare a dull, swirled finish with a corrected, glossy one.</p>
+            <p class="demo-note"><strong>Illustrative demonstration imagery.</strong> These images do not show a real customer vehicle or a real AURELUX result.</p>
+          </div>
+
+          <div class="compare reveal">
+            <img class="compare__img" src="assets/images/compare-before.jpg" alt="Demonstration image: vehicle paint before correction, dull with visible swirl marks" width="1200" height="900" loading="lazy">
+            <div class="compare__after">
+              <img class="compare__img" src="assets/images/compare-after.jpg" alt="Demonstration image: the same paint after correction, deep and glossy" width="1200" height="900" loading="lazy">
+            </div>
+            <span class="compare__label compare__label--before" aria-hidden="true">Before</span>
+            <span class="compare__label compare__label--after" aria-hidden="true">After</span>
+            <input class="compare__range" type="range" min="0" max="100" step="1" value="50" aria-label="Before and after comparison slider">
+            <span class="compare__divider" aria-hidden="true"><span class="compare__knob"></span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SAMPLE REVIEWS (placeholders) ===================== -->
+    <section class="section" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Sample reviews</span>
+          <h2 id="reviews-title">How reviews would appear</h2>
+          <hr class="gold-rule">
+          <p class="lead">These are placeholders that show the layout for customer feedback. They are not real customers or real reviews.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <figure class="quote-card reveal">
+            <span class="badge-demo">Sample</span>
+            <blockquote>Sample text: customers would describe the finish of their vehicle here.</blockquote>
+            <figcaption>Placeholder review, not a real customer</figcaption>
+          </figure>
+          <figure class="quote-card reveal">
+            <span class="badge-demo">Sample</span>
+            <blockquote>Sample text: comments about communication and care would appear here.</blockquote>
+            <figcaption>Placeholder review, not a real customer</figcaption>
+          </figure>
+          <figure class="quote-card reveal">
+            <span class="badge-demo">Sample</span>
+            <blockquote>Sample text: feedback about the overall experience would appear here.</blockquote>
+            <figcaption>Placeholder review, not a real customer</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL CTA ===================== -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container">
+        <span class="eyebrow">Get started</span>
+        <h2 id="cta-title">Ready to see your vehicle at its best?</h2>
+        <p class="lead">Tell us about your vehicle and the finish you want, and request a no-obligation quote.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="contact.html#quote">Request a Quote</a>
+          <a class="btn btn--secondary" href="pricing.html">View Pricing</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="AURELUX Auto Detailing, home">
+            <span class="brand__mark" aria-hidden="true">A</span>
+            <span class="brand__name">AURELUX</span>
+          </a>
+          <p>Premium automotive care. Perfected.</p>
+          <p class="badge-demo">Demo website &middot; Fictional business</p>
+        </div>
+
+        <nav class="footer-nav" aria-labelledby="footer-pages">
+          <h2 id="footer-pages" class="footer-title">Explore</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav" aria-labelledby="footer-services">
+          <h2 id="footer-services" class="footer-title">Services</h2>
+          <ul>
+            <li><a href="services.html#ceramic-coating">Ceramic Coating</a></li>
+            <li><a href="services.html#paint-correction">Paint Correction</a></li>
+            <li><a href="services.html#interior-detailing">Interior Detailing</a></li>
+            <li><a href="services.html#exterior-detailing">Exterior Detailing</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-nav">
+          <h2 class="footer-title">Contact</h2>
+          <p class="text-muted">Contact details are placeholders until a real business supplies them.</p>
+          <a href="contact.html#quote">Request a quote</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> AURELUX Auto Detailing. A fictional business created for portfolio demonstration.</p>
+        <p>Photography is stock imagery used for illustration and does not depict AURELUX customers.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
