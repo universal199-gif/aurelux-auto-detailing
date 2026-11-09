@@ -1,6 +1,6 @@
 /* ==========================================================================
    AURELUX Auto Detailing — js/main.js
-   Shared behaviour for every page. Vanilla JS, no dependencies.
+   Shared behavior for every page. Vanilla JS, no dependencies.
 
    NOTE: the "js" class on <html> is added by a tiny inline script in each
    page's <head>, before the stylesheet loads. The CSS relies on it.

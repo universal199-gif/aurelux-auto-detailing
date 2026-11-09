@@ -1596,3 +1596,8 @@ p {
     transform: none;
   }
 }
+/* Stage 8: stop form controls forcing horizontal overflow on narrow screens */
+.form__grid > .field,
+.field input[type="date"] {
+  min-width: 0;
+}

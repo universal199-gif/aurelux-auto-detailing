@@ -78,7 +78,7 @@
   .site-nav,
   .js .site-nav {
     position: static;
-    display: block;
+    display: flex;
     max-height: none;
     padding: 0;
     overflow: visible;
