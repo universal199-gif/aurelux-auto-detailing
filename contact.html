@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Adds the "js" class BEFORE the stylesheet loads (menu + reveal depend on it) -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <title>Contact &amp; Request a Quote | AURELUX Auto Detailing Demo</title>
+  <meta name="description" content="Request a quote from AURELUX, a fictional premium car detailing studio created as a portfolio demo. The form and contact details on this page are placeholders.">
+  <meta name="theme-color" content="#0B0B0C">
+
+  <!-- Open Graph. TODO before publishing: add og:url and og:image with ABSOLUTE
+       https:// URLs once the live domain is known. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AURELUX Auto Detailing (demo)">
+  <meta property="og:title" content="Contact | AURELUX Auto Detailing">
+  <meta property="og:description" content="Request a quote from a fictional premium detailing studio, created for portfolio demonstration.">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="brand" href="index.html" aria-label="AURELUX Auto Detailing, home">
+        <span class="brand__mark" aria-hidden="true">A</span>
+        <span>
+          <span class="brand__name">AURELUX</span>
+          <span class="brand__sub">Auto Detailing</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html">Home</a></li>
+          <li><a class="site-nav__link" href="services.html">Services</a></li>
+          <li><a class="site-nav__link" href="pricing.html">Pricing</a></li>
+          <li><a class="site-nav__link" href="gallery.html">Gallery</a></li>
+          <li><a class="site-nav__link" href="about.html">About</a></li>
+          <li><a class="site-nav__link" href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+        <div class="site-nav__cta">
+          <a class="btn btn--primary" href="contact.html#quote">Request a Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== PAGE INTRO ===================== -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1 id="page-title">Request a quote</h1>
+        <hr class="gold-rule">
+        <p class="lead">Tell us about your vehicle and the finish you want. A real studio would reply with a clear, written quote.</p>
+        <p class="demo-note"><strong>Demo page.</strong> The form is not connected to a real inbox until a Formspree form is configured, and every contact detail below is a placeholder. Nothing on this page reaches a real business.</p>
+      </div>
+    </section>
+
+    <!-- ===================== QUOTE FORM + DETAILS =====================
+         The id="quote" below is the target of every "Request a Quote" link on the site.
+
+         TO ACTIVATE THE FORM (before publishing):
+         1. Create a free form at formspree.io and copy its form ID.
+         2. Replace YOUR_FORM_ID in the form's action attribute with that ID.
+         3. Submit a real test and confirm the message arrives. Only then publish.
+         Until then the form validates but never sends and never shows a success message. -->
+    <section class="section" id="quote" aria-labelledby="quote-title">
+      <div class="container">
+        <div class="contact-grid">
+
+          <div>
+            <span class="eyebrow">Quote request</span>
+            <h2 id="quote-title">Tell us about your vehicle</h2>
+            <hr class="gold-rule">
+
+            <noscript>
+              <p class="demo-note">JavaScript is turned off, so this demo form cannot check your entries or confirm a submission.</p>
+            </noscript>
+
+            <p class="demo-note"><strong>Demo form.</strong> Until the business connects a Formspree form, submitting this form sends nothing. When connected, your details go to the business through Formspree, a third-party form service.</p>
+
+            <form class="form" id="quote-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+              <p class="field__hint">Fields marked <span class="req" aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
+
+              <!-- Hidden spam trap and subject line used by Formspree -->
+              <input type="hidden" name="_subject" value="New quote request (AURELUX demo)">
+              <div class="visually-hidden" aria-hidden="true">
+                <label for="f-gotcha">Leave this field empty</label>
+                <input type="text" id="f-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+              </div>
+
+              <fieldset>
+                <legend class="form__legend">Your details</legend>
+                <div class="form__grid">
+                  <div class="field">
+                    <label for="f-name">Full name <span class="req" aria-hidden="true">*</span></label>
+                    <input type="text" id="f-name" name="name" data-validate="name" autocomplete="name" required aria-describedby="f-name-error">
+                    <span class="field__error" id="f-name-error" aria-live="polite" hidden></span>
+                  </div>
+
+                  <div class="field">
+                    <label for="f-email">Email address <span class="req" aria-hidden="true">*</span></label>
+                    <input type="email" id="f-email" name="email" data-validate="email" autocomplete="email" inputmode="email" autocapitalize="none" required aria-describedby="f-email-error">
+                    <span class="field__error" id="f-email-error" aria-live="polite" hidden></span>
+                  </div>
+
+                  <div class="field field--full">
+                    <label for="f-phone">Phone number (optional)</label>
+                    <input type="tel" id="f-phone" name="phone" data-validate="phone" autocomplete="tel" inputmode="tel" aria-describedby="f-phone-hint f-phone-error">
+                    <span class="field__hint" id="f-phone-hint">Only if you would like a call back.</span>
+                    <span class="field__error" id="f-phone-error" aria-live="polite" hidden></span>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend class="form__legend">Your vehicle</legend>
+                <div class="form__grid">
+                  <div class="field">
+                    <label for="f-make">Make <span class="req" aria-hidden="true">*</span></label>
+                    <input type="text" id="f-make" name="vehicle_make" data-validate="make" autocapitalize="words" required aria-describedby="f-make-error">
+                    <span class="field__error" id="f-make-error" aria-live="polite" hidden></span>
+                  </div>
+
+                  <div class="field">
+                    <label for="f-model">Model <span class="req" aria-hidden="true">*</span></label>
+                    <input type="text" id="f-model" name="vehicle_model" data-validate="model" autocapitalize="words" required aria-describedby="f-model-error">
+                    <span class="field__error" id="f-model-error" aria-live="polite" hidden></span>
+                  </div>
+
+                  <div class="field">
+                    <label for="f-year">Year (optional)</label>
+                    <input type="text" id="f-year" name="vehicle_year" data-validate="year" inputmode="numeric" maxlength="4" aria-describedby="f-year-hint f-year-error">
+                    <span class="field__hint" id="f-year-hint">For example, 2022</span>
+                    <span class="field__error" id="f-year-error" aria-live="polite" hidden></span>
+                  </div>
+
+                  <div class="field">
+                    <label for="f-color">Color (optional)</label>
+                    <input type="text" id="f-color" name="vehicle_color" autocapitalize="words">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend class="form__legend">Your request</legend>
+                <div class="form__grid">
+                  <div class="field">
+                    <label for="f-service">Requested service <span class="req" aria-hidden="true">*</span></label>
+                    <select id="f-service" name="service" data-validate="service" required aria-describedby="f-service-error">
+                      <option value="" selected disabled>Choose a service</option>
+                      <optgroup label="Services">
+                        <option value="Ceramic Coating">Ceramic Coating</option>
+                        <option value="Paint Correction">Paint Correction</option>
+                        <option value="Interior Detailing">Interior Detailing</option>
+                        <option value="Exterior Detailing">Exterior Detailing</option>
+                      </optgroup>
+                      <optgroup label="Packages">
+                        <option value="Refresh package">Refresh package</option>
+                        <option value="Signature package">Signature package</option>
+                        <option value="Prestige package">Prestige package</option>
+                      </optgroup>
+                      <option value="Not sure">Not sure, please advise</option>
+                    </select>
+                    <span class="field__error" id="f-service-error" aria-live="polite" hidden></span>
+                  </div>
+
+                  <div class="field">
+                    <label for="f-date">Preferred date (optional)</label>
+                    <input type="date" id="f-date" name="preferred_date" data-validate="date" aria-describedby="f-date-hint f-date-error">
+                    <span class="field__hint" id="f-date-hint">Availability would be confirmed in the quote.</span>
+                    <span class="field__error" id="f-date-error" aria-live="polite" hidden></span>
+                  </div>
+
+                  <div class="field field--full">
+                    <label for="f-message">Message (optional)</label>
+                    <textarea id="f-message" name="message" data-validate="message" rows="5" maxlength="2000" aria-describedby="f-message-hint f-message-error"></textarea>
+                    <span class="field__hint" id="f-message-hint">Anything we should know about the condition of the vehicle or what you would like done.</span>
+                    <span class="field__error" id="f-message-error" aria-live="polite" hidden></span>
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="form__status" id="form-status" role="status" aria-live="polite"></div>
+
+              <button class="btn btn--primary btn--block" type="submit" id="submit-btn">Send Quote Request</button>
+            </form>
+          </div>
+
+          <aside class="info-card" aria-labelledby="details-title">
+            <span class="badge-demo">Placeholders</span>
+            <h3 id="details-title" class="mt-5">Contact details</h3>
+            <p class="text-muted">Replace each bracketed item with real information before publishing. Phone and email links are added only once real details are supplied.</p>
+            <dl class="info-list">
+              <div>
+                <dt>Phone</dt>
+                <dd class="text-muted">[Phone number: to be supplied]</dd>
+              </div>
+              <div>
+                <dt>Email</dt>
+                <dd class="text-muted">[Email address: to be supplied]</dd>
+              </div>
+              <div>
+                <dt>Address</dt>
+                <dd class="text-muted">[Business address: to be supplied]</dd>
+              </div>
+              <div>
+                <dt>Opening hours</dt>
+                <dd class="text-muted">[Opening hours: to be supplied]</dd>
+              </div>
+              <div>
+                <dt>Social media</dt>
+                <dd class="text-muted">[Social media links: to be supplied]</dd>
+              </div>
+            </dl>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BOOKING + LOCATION PLACEHOLDERS ===================== -->
+    <section class="section section--alt" aria-labelledby="booking-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Booking and location</span>
+          <h2 id="booking-title">Prefer to book a time?</h2>
+          <hr class="gold-rule">
+          <p class="lead">Both blocks below are placeholders that a real business would switch on with its own details.</p>
+        </div>
+
+        <div class="grid grid--2">
+
+          <!-- CALENDLY PLACEHOLDER
+               TO ACTIVATE: put the business's real scheduling link in data-calendly-url,
+               for example data-calendly-url="https://calendly.com/your-account/your-event".
+               Only https://calendly.com/ addresses are accepted. Leave empty until then. -->
+          <div id="booking" data-calendly-url="">
+            <div class="placeholder-box" data-booking-placeholder>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>
+              <h3>Online booking</h3>
+              <p>Online scheduling is not set up in this demo. Once a real business has a Calendly account, its scheduling link can be added here.</p>
+              <button class="btn btn--secondary" type="button" disabled>Booking not available yet</button>
+            </div>
+            <a class="btn btn--primary btn--block" data-booking-link target="_blank" rel="noopener" hidden>Book a Time<span class="visually-hidden"> (opens Calendly in a new tab)</span></a>
+          </div>
+
+          <!-- MAP PLACEHOLDER: add an embedded map only after a real, verified address exists -->
+          <div class="placeholder-box">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <h3>Location</h3>
+            <p>AURELUX is a fictional business with no real address, so no map is shown. A real studio would add its address and an embedded map here.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="AURELUX Auto Detailing, home">
+            <span class="brand__mark" aria-hidden="true">A</span>
+            <span class="brand__name">AURELUX</span>
+          </a>
+          <p>Premium automotive care. Perfected.</p>
+          <p class="badge-demo">Demo website &middot; Fictional business</p>
+        </div>
+
+        <nav class="footer-nav" aria-labelledby="footer-pages">
+          <h2 id="footer-pages" class="footer-title">Explore</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav" aria-labelledby="footer-services">
+          <h2 id="footer-services" class="footer-title">Services</h2>
+          <ul>
+            <li><a href="services.html#ceramic-coating">Ceramic Coating</a></li>
+            <li><a href="services.html#paint-correction">Paint Correction</a></li>
+            <li><a href="services.html#interior-detailing">Interior Detailing</a></li>
+            <li><a href="services.html#exterior-detailing">Exterior Detailing</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-nav">
+          <h2 class="footer-title">Contact</h2>
+          <p class="text-muted">Contact details are placeholders until a real business supplies them.</p>
+          <a href="contact.html#quote">Request a quote</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> AURELUX Auto Detailing. A fictional business created for portfolio demonstration.</p>
+        <p>Photography is stock imagery used for illustration and does not depict AURELUX customers.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== PAGE SCRIPT (contact page only) =====================
+       1. Form validation + submission (never shows success unless Formspree
+          confirms the submission).
+       2. Calendly link activation. -->
+  <script>
+  (function () {
+    'use strict';
+
+    /* ---------- 1. QUOTE FORM ---------- */
+    var form = document.getElementById('quote-form');
+    if (form) {
+      var statusEl = document.getElementById('form-status');
+      var submitBtn = document.getElementById('submit-btn');
+      var submitLabel = submitBtn.textContent;
+      var motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var fields = Array.prototype.slice.call(form.querySelectorAll('[data-validate]'));
+
+      // With JavaScript running we show our own messages; without it the
+      // browser's built-in validation still works.
+      form.setAttribute('novalidate', '');
+
+      // The form only counts as configured once a real Formspree ID is in place
+      function isConfigured() {
+        var action = form.getAttribute('action') || '';
+        return /^https:\/\/formspree\.io\/f\/[A-Za-z0-9]+$/.test(action) &&
+               action.indexOf('YOUR_FORM_ID') === -1;
+      }
+
+      function todayString() {
+        var d = new Date();
+        var month = String(d.getMonth() + 1).padStart(2, '0');
+        var day = String(d.getDate()).padStart(2, '0');
+        return d.getFullYear() + '-' + month + '-' + day;
+      }
+
+      var dateField = form.querySelector('[data-validate="date"]');
+      if (dateField) dateField.min = todayString();
+
+      // Each validator returns an error message, or '' when the value is fine
+      var validators = {
+        name: function (v) {
+          return v ? '' : 'Please enter your name.';
+        },
+        email: function (v) {
+          if (!v) return 'Please enter your email address.';
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)
+            ? ''
+            : 'Please enter a valid email address, for example name@example.com.';
+        },
+        phone: function (v) {
+          return !v || /^[0-9+()\-.\s]{7,20}$/.test(v)
+            ? ''
+            : 'Please enter a valid phone number, or leave this blank.';
+        },
+        make: function (v) {
+          return v ? '' : 'Please enter the vehicle make.';
+        },
+        model: function (v) {
+          return v ? '' : 'Please enter the vehicle model.';
+        },
+        year: function (v) {
+          return !v || /^(19|20)\d{2}$/.test(v)
+            ? ''
+            : 'Please enter a four-digit year, for example 2022, or leave this blank.';
+        },
+        service: function (v) {
+          return v ? '' : 'Please choose a service.';
+        },
+        date: function (v) {
+          return !v || v >= todayString() ? '' : 'Please choose today or a later date.';
+        },
+        message: function (v) {
+          return v.length <= 2000 ? '' : 'Please keep your message under 2,000 characters.';
+        }
+      };
+
+      function setError(control, message) {
+        var errorEl = document.getElementById(control.id + '-error');
+        if (message) {
+          control.setAttribute('aria-invalid', 'true');
+          if (errorEl) {
+            errorEl.textContent = message;
+            errorEl.hidden = false;
+          }
+        } else {
+          control.removeAttribute('aria-invalid');
+          if (errorEl) {
+            errorEl.textContent = '';
+            errorEl.hidden = true;
+          }
+        }
+      }
+
+      function validate(control, show) {
+        var check = validators[control.getAttribute('data-validate')];
+        var message = check ? check(control.value.trim()) : '';
+        if (show) setError(control, message);
+        return message;
+      }
+
+      function showStatus(type, text) {
+        statusEl.className = 'form__status' +
+          (type === 'error' ? ' form__status--error' : '') +
+          (type === 'success' ? ' form__status--success' : '');
+        statusEl.textContent = text;
+        statusEl.scrollIntoView({ block: 'center', behavior: motion.matches ? 'auto' : 'smooth' });
+      }
+
+      function clearStatus() {
+        statusEl.className = 'form__status';
+        statusEl.textContent = '';
+      }
+
+      function setSending(sending) {
+        submitBtn.disabled = sending;
+        submitBtn.textContent = sending ? 'Sending\u2026' : submitLabel;
+      }
+
+      // Validate a field when the user leaves it (but not if they never touched it)
+      form.addEventListener('input', function (event) {
+        var control = event.target;
+        if (!control.matches || !control.matches('[data-validate]')) return;
+        control.setAttribute('data-dirty', 'true');
+        if (control.getAttribute('aria-invalid')) validate(control, true); // clear errors as the user fixes them
+      });
+
+      form.addEventListener('change', function (event) {
+        var control = event.target;
+        if (control.matches && control.matches('[data-validate]')) {
+          control.setAttribute('data-dirty', 'true');
+          validate(control, true);
+        }
+      });
+
+      form.addEventListener('focusout', function (event) {
+        var control = event.target;
+        if (!control.matches || !control.matches('[data-validate]')) return;
+        if (control.value.trim() === '' && !control.getAttribute('data-dirty')) return;
+        validate(control, true);
+      });
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        clearStatus();
+
+        var invalid = fields.filter(function (control) {
+          return validate(control, true) !== '';
+        });
+
+        if (invalid.length) {
+          showStatus('error', invalid.length === 1
+            ? 'Please correct the highlighted field and try again.'
+            : 'Please correct the ' + invalid.length + ' highlighted fields and try again.');
+          invalid[0].focus();
+          return;
+        }
+
+        // Spam trap: real people never fill this hidden field
+        var trap = form.elements['_gotcha'];
+        if (trap && trap.value) return;
+
+        // Not configured: be honest, send nothing, and never show a success message
+        if (!isConfigured()) {
+          showStatus('info', 'Demo form: nothing was sent. This form is not connected to a real inbox yet. To activate it, replace YOUR_FORM_ID in the form\u2019s action with a Formspree form ID.');
+          return;
+        }
+
+        setSending(true);
+        fetch(form.getAttribute('action'), {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        })
+          .then(function (response) {
+            if (response.ok) {
+              form.reset();
+              fields.forEach(function (control) {
+                control.removeAttribute('data-dirty');
+                setError(control, '');
+              });
+              showStatus('success', 'Thank you. Your quote request was sent.');
+              return null;
+            }
+            return response.json().catch(function () { return null; }).then(function (data) {
+              var detail = data && data.errors
+                ? ' ' + data.errors.map(function (e) { return e.message; }).join(' ')
+                : '';
+              showStatus('error', 'Sorry, your request could not be sent.' + detail + ' Please try again.');
+            });
+          })
+          .catch(function () {
+            showStatus('error', 'Sorry, your request could not be sent. Please check your connection and try again.');
+          })
+          .then(function () {
+            setSending(false);
+          });
+      });
+    }
+
+    /* ---------- 2. CALENDLY LINK ACTIVATION ---------- */
+    var booking = document.getElementById('booking');
+    if (booking) {
+      var raw = (booking.getAttribute('data-calendly-url') || '').trim();
+      try {
+        var url = new URL(raw);
+        if (url.protocol === 'https:' && url.hostname === 'calendly.com') {
+          var link = booking.querySelector('[data-booking-link]');
+          var placeholder = booking.querySelector('[data-booking-placeholder]');
+          link.href = url.href;
+          link.hidden = false;
+          if (placeholder) placeholder.hidden = true;
+        }
+      } catch (error) {
+        /* Empty or invalid value: the placeholder stays in place */
+      }
+    }
+  })();
+  </script>
+</body>
+</html>
