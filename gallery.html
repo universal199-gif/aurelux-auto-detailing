@@ -98,10 +98,9 @@
         <!-- Hidden until gallery.js runs, so the buttons are never shown without a working script -->
         <div class="filter-bar" id="gallery-filters" role="group" aria-label="Filter gallery by category" hidden>
           <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">All</button>
-          <button class="filter-chip" type="button" data-filter="exterior" aria-pressed="false">Exterior Detailing</button>
-          <button class="filter-chip" type="button" data-filter="interior" aria-pressed="false">Interior Detailing</button>
-          <button class="filter-chip" type="button" data-filter="correction" aria-pressed="false">Paint Correction</button>
-          <button class="filter-chip" type="button" data-filter="ceramic" aria-pressed="false">Ceramic Coating</button>
+          <button class="filter-chip" type="button" data-filter="exterior" aria-pressed="false">Exterior</button>
+          <button class="filter-chip" type="button" data-filter="polishing" aria-pressed="false">Polishing &amp; Finishing</button>
+          <button class="filter-chip" type="button" data-filter="interior" aria-pressed="false">Interior &amp; Products</button>
         </div>
 
         <!-- Announces filter results to screen readers -->
@@ -110,48 +109,33 @@
         <div class="gallery-grid" id="gallery-grid">
 
           <button class="gallery-item gallery-item--feature" type="button" data-category="exterior" aria-haspopup="dialog">
-            <img src="assets/images/gallery-exterior-01.jpg" alt="Demonstration image: dark sedan with a deep, mirror-like gloss after an exterior detail" width="1600" height="1200" loading="lazy">
-            <span class="gallery-item__caption" aria-hidden="true"><span>Exterior Detailing</span>Deep gloss on a dark sedan (demo image)</span>
+            <img src="assets/images/exterior-black-sports-car.webp" alt="Demonstration image: black sports car in side view against a dark backdrop with a glossy finish" width="1600" height="1200" loading="lazy">
+            <span class="gallery-item__caption" aria-hidden="true"><span>Exterior</span>Glossy black paint in low light (demo image)</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-category="polishing" aria-haspopup="dialog">
+            <img src="assets/images/polishing-black-car.webp" alt="Demonstration image: machine polishing the paint of a black car in a workshop" width="1200" height="900" loading="lazy">
+            <span class="gallery-item__caption" aria-hidden="true"><span>Polishing &amp; Finishing</span>Machine polishing in a workshop (demo image)</span>
           </button>
 
           <button class="gallery-item" type="button" data-category="interior" aria-haspopup="dialog">
-            <img src="assets/images/gallery-interior-01.jpg" alt="Demonstration image: clean leather seats and dashboard in a luxury car interior" width="1200" height="900" loading="lazy">
-            <span class="gallery-item__caption" aria-hidden="true"><span>Interior Detailing</span>A refined, freshly cleaned cabin (demo image)</span>
-          </button>
-
-          <button class="gallery-item" type="button" data-category="correction" aria-haspopup="dialog">
-            <img src="assets/images/gallery-correction-01.jpg" alt="Demonstration image: polishing machine working on a car panel under inspection light" width="1200" height="900" loading="lazy">
-            <span class="gallery-item__caption" aria-hidden="true"><span>Paint Correction</span>Machine polishing under inspection light (demo image)</span>
-          </button>
-
-          <button class="gallery-item" type="button" data-category="ceramic" aria-haspopup="dialog">
-            <img src="assets/images/gallery-ceramic-01.jpg" alt="Demonstration image: gloved hand applying ceramic coating to a glossy car panel" width="1200" height="900" loading="lazy">
-            <span class="gallery-item__caption" aria-hidden="true"><span>Ceramic Coating</span>Coating application in progress (demo image)</span>
+            <img src="assets/images/interior-leather-seats.webp" alt="Demonstration image: luxury car interior with diamond-stitched leather seats" width="1200" height="900" loading="lazy">
+            <span class="gallery-item__caption" aria-hidden="true"><span>Interior &amp; Products</span>Leather seats and stitching detail (demo image)</span>
           </button>
 
           <button class="gallery-item" type="button" data-category="exterior" aria-haspopup="dialog">
-            <img src="assets/images/gallery-exterior-02.jpg" alt="Demonstration image: water beading on freshly washed car paint" width="1200" height="900" loading="lazy">
-            <span class="gallery-item__caption" aria-hidden="true"><span>Exterior Detailing</span>Water beading on freshly cleaned paint (demo image)</span>
+            <img src="assets/images/exterior-wheel-wash.webp" alt="Demonstration image: close-up of a car wheel with water droplets during a wash" width="1200" height="900" loading="lazy">
+            <span class="gallery-item__caption" aria-hidden="true"><span>Exterior</span>Wheel and paint during a wash (demo image)</span>
           </button>
 
-          <button class="gallery-item" type="button" data-category="correction" aria-haspopup="dialog">
-            <img src="assets/images/gallery-correction-02.jpg" alt="Demonstration image: close-up of reflective car paint with swirl marks reduced" width="1200" height="900" loading="lazy">
-            <span class="gallery-item__caption" aria-hidden="true"><span>Paint Correction</span>Reflections restored in the paint (demo image)</span>
+          <button class="gallery-item" type="button" data-category="polishing" aria-haspopup="dialog">
+            <img src="assets/images/finishing-protective-product.webp" alt="Demonstration image: hands applying a protective detailing product to a car with a blue sponge" width="1200" height="900" loading="lazy">
+            <span class="gallery-item__caption" aria-hidden="true"><span>Polishing &amp; Finishing</span>Applying a protective detailing product (demo image)</span>
           </button>
 
           <button class="gallery-item" type="button" data-category="interior" aria-haspopup="dialog">
-            <img src="assets/images/gallery-interior-02.jpg" alt="Demonstration image: close view of car seat stitching and interior trim" width="1200" height="900" loading="lazy">
-            <span class="gallery-item__caption" aria-hidden="true"><span>Interior Detailing</span>Seat and trim detail (demo image)</span>
-          </button>
-
-          <button class="gallery-item" type="button" data-category="ceramic" aria-haspopup="dialog">
-            <img src="assets/images/gallery-ceramic-02.jpg" alt="Demonstration image: glossy coated car hood reflecting studio lights" width="1200" height="900" loading="lazy">
-            <span class="gallery-item__caption" aria-hidden="true"><span>Ceramic Coating</span>Gloss on a coated surface (demo image)</span>
-          </button>
-
-          <button class="gallery-item" type="button" data-category="exterior" aria-haspopup="dialog">
-            <img src="assets/images/gallery-exterior-03.jpg" alt="Demonstration image: clean wheel and lower bodywork of a luxury car" width="1200" height="900" loading="lazy">
-            <span class="gallery-item__caption" aria-hidden="true"><span>Exterior Detailing</span>Wheels and trim cleaned (demo image)</span>
+            <img src="assets/images/detailing-products-cart.webp" alt="Demonstration image: detailing products and cloths on a cart beside a car in a garage" width="1200" height="900" loading="lazy">
+            <span class="gallery-item__caption" aria-hidden="true"><span>Interior &amp; Products</span>Detailing products on a garage cart (demo image)</span>
           </button>
 
         </div>
