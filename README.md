@@ -1,20 +1,44 @@
 # AURELUX Auto Detailing (demo)
 
-A fictional premium car detailing website created as a portfolio demonstration. Not a real business.
+A multi-page, static, mobile-first website for a **fictional** premium car detailing studio in Costa Mesa, California. It was built as a portfolio demonstration and as a reusable starting point for real car-detailing clients.
 
-## Image credits
+> **Demo notice.** AURELUX is not a real business. Contact details are placeholders, prices are illustrative, the sample reviews are placeholders, and the photographs are stock images. Nothing here is a real quotation, testimonial, award or certification.
 
-All photographs are stock photographs from Pexels, used under the Pexels License (free for commercial use, attribution not required, credited here as good practice). They are illustrative and do not show AURELUX customers or real work. Original JPEGs are kept outside this repository.
+Live site: _to be added after the first Cloudflare Pages deployment_
 
-| File | Photographer | Source |
+## Pages
+
+| Page | File | Purpose |
 |---|---|---|
-| exterior-black-sports-car.webp | Andreas Ebner | https://www.pexels.com/photo/sleek-black-sports-car-in-dramatic-low-light-31298995/ |
-| exterior-wheel-wash.webp | Anil Chandran | https://www.pexels.com/photo/close-up-of-a-car-wheel-during-a-car-wash-32667420/ |
-| polishing-black-car.webp | Khunkorn Laowisit | https://www.pexels.com/photo/a-person-polishing-the-black-car-5233259/ |
-| finishing-protective-product.webp | WAVYVISUALS | https://www.pexels.com/photo/applying-car-cleaner-on-blue-sponge-20051453/ |
-| detailing-products-cart.webp | WAVYVISUALS | https://www.pexels.com/photo/colorful-cloths-on-table-near-car-20051443/ |
-| interior-leather-seats.webp | Luke Miller | https://www.pexels.com/photo/luxury-classic-car-interior-at-auto-show-32725848/ |
-| compare-after.webp | Andreas Ebner | derived from the exterior-black-sports-car photograph |
-| compare-before.webp | Andreas Ebner (digitally altered) | Illustrative simulation, not a real detailing result |
+| Home | index.html | Gradient hero, value strip, featured services, before/after simulation, sample reviews, call to action |
+| Services | services.html | Ceramic coating, paint correction, interior, exterior and package overviews |
+| Pricing | pricing.html | Three illustrative packages with a comparison table |
+| Gallery | gallery.html | Filterable photo grid with an accessible lightbox |
+| About | about.html | Brand philosophy, standards, customer experience and process (typographic, no photographs) |
+| Contact | contact.html | Quote form (Formspree placeholder), Calendly placeholder, contact detail placeholders |
 
-The finishing-protective-product image is described generically as applying a protective detailing product. It is not presented as a ceramic coating application.
+## Tech stack
+
+HTML5, CSS3 and vanilla JavaScript. Google Fonts (Cormorant Garamond and Inter). No framework, build step, backend or database. It deploys as a plain static site.
+
+## Project structure
+aurelux-auto-detailing/
+├── index.html
+├── services.html
+├── pricing.html
+├── gallery.html
+├── about.html
+├── contact.html
+├── favicon.svg
+├── css/
+│   ├── style.css          Design tokens, base and component styles (mobile first)
+│   └── responsive.css     Tablet and desktop enhancements (loads after style.css)
+├── js/
+│   ├── main.js            Shared: mobile menu, header, scroll reveal, before/after slider, image fallback
+│   └── gallery.js         Gallery filters and lightbox (gallery page only)
+├── assets/
+│   ├── images/            Optimized WebP photographs (see credits)
+│   ├── icons/             Empty placeholder folder
+│   └── fonts/             Empty placeholder folder
+├── .gitignore
+└── README.md
